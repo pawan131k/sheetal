@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheetal Enterprises — AC Sales & Service | Dombivali East</title>
+<meta name="description" content="Sheetal Enterprises: Premium Air Conditioner Sales, Installation, Repair & AMC services in Dombivali East, Thane. Call 8286457953.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+/* ============ DESIGN TOKENS ============ */
+:root{
+  --bg-overlay: linear-gradient(160deg, rgba(4,10,24,.92) 0%, rgba(6,18,38,.88) 45%, rgba(2,8,20,.94) 100%);
+  --glass-bg: rgba(255,255,255,.06);
+  --glass-bg-strong: rgba(255,255,255,.09);
+  --glass-border: rgba(255,255,255,.14);
+  --text-1:#f2f6fc;
+  --text-2:#aebacc;
+  --text-3:#7c8aa0;
+  --primary:#22d3ee;
+  --primary-2:#3b82f6;
+  --accent:#f59e0b;
+  --accent-2:#f97316;
+  --danger-1:#ef4444; --danger-2:#f43f5e;
+  --success-1:#10b981; --success-2:#22c55e;
+  --grad-primary: linear-gradient(135deg,#22d3ee 0%,#3b82f6 100%);
+  --grad-accent: linear-gradient(135deg,#f59e0b 0%,#f97316 100%);
+  --grad-danger: linear-gradient(135deg,#ef4444 0%,#f43f5e 100%);
+  --grad-success: linear-gradient(135deg,#10b981 0%,#22c55e 100%);
+  --glow-primary: 0 0 24px rgba(34,211,238,.35), 0 8px 32px rgba(59,130,246,.25);
+  --glow-accent: 0 0 24px rgba(245,158,11,.35), 0 8px 32px rgba(249,115,22,.22);
+  --shadow-card: 0 8px 32px rgba(0,0,0,.35);
+  --nav-bg: rgba(8,15,30,.55);
+  --input-bg: rgba(255,255,255,.05);
+  --radius:20px;
+}
+[data-theme="light"]{
+  --bg-overlay: linear-gradient(160deg, rgba(235,242,250,.92) 0%, rgba(220,234,248,.88) 45%, rgba(240,246,252,.94) 100%);
+  --glass-bg: rgba(255,255,255,.55);
+  --glass-bg-strong: rgba(255,255,255,.72);
+  --glass-border: rgba(13,45,90,.12);
+  --text-1:#0b1a30;
+  --text-2:#3d506b;
+  --text-3:#64748b;
+  --shadow-card: 0 8px 32px rgba(15,45,90,.12);
+  --nav-bg: rgba(255,255,255,.6);
+  --input-bg: rgba(10,30,60,.04);
+}
+/* ============ BASE ============ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Poppins',sans-serif;
+  color:var(--text-1);
+  min-height:100vh;
+  background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=70');
+  background-size:cover;background-position:center;background-attachment:fixed;
+  transition:color .4s ease;
+}
+body::before{
+  content:'';position:fixed;inset:0;background:var(--bg-overlay);z-index:-1;
+  transition:background .5s ease;
+}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
+::selection{background:rgba(34,211,238,.35)}
+/* ============ NAVBAR ============ */
+.navbar{
+  position:sticky;top:0;z-index:1000;
+  background:var(--nav-bg);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--glass-border);
+  transition:background .4s ease;
+}
+.nav-inner{
+  max-width:1200px;margin:0 auto;padding:.7rem 1.2rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.logo{display:flex;align-items:center;gap:.7rem;cursor:pointer}
+.logo-badge{
+  width:48px;height:48px;border-radius:14px;
+  background:var(--glass-bg-strong);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;box-shadow:var(--glow-primary);
+  font-weight:800;font-size:1.05rem;letter-spacing:-.5px;
+  background-image:var(--grad-primary);
+  -webkit-background-clip:padding-box;
+}
+.logo-badge span{
+  background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.logo-badge i{
+  position:absolute;top:-7px;right:-7px;font-size:.85rem;color:var(--primary);
+  background:var(--nav-bg);border-radius:50%;padding:3px;
+  border:1px solid var(--glass-border);
+  animation:spinSlow 12s linear infinite;
+}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.logo-text{line-height:1.15}
+.logo-text b{font-size:1.05rem;font-weight:700;display:block}
+.logo-text small{font-size:.62rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--primary);font-weight:500}
+.nav-links{display:flex;gap:.25rem;list-style:none;align-items:center}
+.nav-links a{
+  padding:.5rem .85rem;border-radius:12px;font-size:.85rem;font-weight:500;
+  color:var(--text-2);transition:all .3s ease;white-space:nowrap;
+}
+.nav-links a:hover{color:var(--text-1);background:var(--glass-bg)}
+.nav-links a.active{
+  color:#fff;background:var(--grad-primary);
+  box-shadow:0 0 18px rgba(34,211,238,.4);
+}
+.nav-actions{display:flex;align-items:center;gap:.6rem}
+.theme-toggle{
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-border);
+  background:var(--glass-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  color:var(--accent);font-size:1.05rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .35s ease;box-shadow:0 0 14px rgba(245,158,11,.25);
+}
+.theme-toggle:hover{transform:rotate(25deg) scale(1.08);box-shadow:var(--glow-accent)}
+.hamburger{
+  display:none;width:44px;height:44px;border-radius:12px;
+  border:1px solid var(--glass-border);background:var(--glass-bg);
+  color:var(--text-1);font-size:1.1rem;cursor:pointer;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+/* ============ SECTIONS / SPA ============ */
+.tab-section{display:none;max-width:1200px;margin:0 auto;padding:3.2rem 1.2rem 4rem;}
+.tab-section.active{display:block;animation:fadeUp .55s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.section-head{text-align:center;margin-bottom:2.6rem}
+.section-head .kicker{
+  display:inline-block;font-size:.72rem;letter-spacing:3px;text-transform:uppercase;
+  font-weight:600;padding:.35rem 1rem;border-radius:99px;
+  background:var(--glass-bg);border:1px solid var(--glass-border);color:var(--primary);
+  margin-bottom:.9rem;
+}
+.section-head h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;line-height:1.2}
+.section-head h2 .grad{background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.section-head p{color:var(--text-2);max-width:560px;margin:.8rem auto 0;font-size:.92rem;font-weight:300}
+/* ============ HERO ============ */
+.hero{min-height:calc(100vh - 78px);display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem 1.2rem}
+.hero-inner{max-width:860px}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:500;
+  padding:.45rem 1.1rem;border-radius:99px;margin-bottom:1.4rem;
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--text-2);
+}
+.hero-badge i{color:var(--primary)}
+.hero h1{
+  font-size:clamp(2.3rem,6.5vw,4.4rem);font-weight:800;line-height:1.12;
+  letter-spacing:-1px;will-change:transform;
+}
+.hero h1 .grad{background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero h1 .grad-warm{background:var(--grad-accent);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--text-2);font-size:1.02rem;font-weight:300;max-width:600px;margin:1.3rem auto 2.2rem}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;border:none;cursor:pointer;
+  padding:.95rem 2.1rem;border-radius:99px;font-size:.95rem;font-weight:600;
+  transition:all .35s ease;
+}
+.btn-primary{background:var(--grad-primary);color:#fff;box-shadow:0 4px 24px rgba(34,211,238,.35)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--glow-primary)}
+.btn-ghost{
+  background:var(--glass-bg);color:var(--text-1);border:1px solid var(--glass-border);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--primary);box-shadow:0 0 20px rgba(34,211,238,.25)}
+.hero-stats{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:3rem}
+.stat-chip{
+  background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  padding:1rem 1.6rem;min-width:150px;transition:all .35s ease;
+}
+.stat-chip:hover{transform:translateY(-4px);box-shadow:var(--glow-primary);border-color:rgba(34,211,238,.4)}
+.stat-chip b{font-size:1.5rem;font-weight:700;display:block;background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-chip span{font-size:.75rem;color:var(--text-2)}
+</style>
+<style>
+/* ============ SERVICES ============ */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.4rem}
+.service-card{
+  position:relative;border-radius:var(--radius);overflow:hidden;min-height:340px;
+  border:1px solid var(--glass-border);box-shadow:var(--shadow-card);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  transition:transform .4s ease, box-shadow .4s ease;cursor:default;
+}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--glow-primary)}
+.service-bg{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  transition:transform .7s ease;z-index:0;
+}
+.service-card:hover .service-bg{transform:scale(1.08)}
+.service-card::after{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(3,10,25,.15) 0%,rgba(3,10,25,.55) 45%,rgba(3,10,25,.92) 100%);
+}
+.service-content{position:relative;z-index:2;padding:1.6rem}
+.service-icon{
+  width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.2);font-size:1.3rem;color:#67e8f9;margin-bottom:1rem;
+  box-shadow:0 0 18px rgba(34,211,238,.3);
+}
+.service-content h3{font-size:1.15rem;font-weight:600;color:#fff;margin-bottom:.45rem}
+.service-content p{font-size:.82rem;color:rgba(255,255,255,.75);font-weight:300;line-height:1.6}
+.service-tag{
+  display:inline-block;margin-top:.9rem;font-size:.7rem;font-weight:600;letter-spacing:1px;
+  text-transform:uppercase;color:#67e8f9;
+}
+/* ============ FORMS ============ */
+.forms-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:start}
+.form-card{
+  background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  padding:2rem 1.8rem;box-shadow:var(--shadow-card);position:relative;overflow:hidden;
+  transition:box-shadow .4s ease;
+}
+.form-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.form-card.complaint::before{background:var(--grad-danger)}
+.form-card.inquiry::before{background:var(--grad-success)}
+.form-card.complaint:hover{box-shadow:0 0 30px rgba(239,68,68,.22),var(--shadow-card)}
+.form-card.inquiry:hover{box-shadow:0 0 30px rgba(16,185,129,.22),var(--shadow-card)}
+.form-title{display:flex;align-items:center;gap:.8rem;margin-bottom:.4rem}
+.form-title .ficon{
+  width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;color:#fff;flex-shrink:0;
+}
+.complaint .ficon{background:var(--grad-danger);box-shadow:0 0 16px rgba(239,68,68,.4)}
+.inquiry .ficon{background:var(--grad-success);box-shadow:0 0 16px rgba(16,185,129,.4)}
+.form-title h3{font-size:1.15rem;font-weight:600}
+.form-sub{font-size:.8rem;color:var(--text-2);font-weight:300;margin-bottom:1.5rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font-size:.75rem;font-weight:500;color:var(--text-2);margin-bottom:.4rem;letter-spacing:.3px}
+.field label .req{color:var(--danger-1)}
+.field input,.field textarea,.field select{
+  width:100%;padding:.75rem .95rem;border-radius:12px;font-family:inherit;font-size:.86rem;
+  background:var(--input-bg);border:1px solid var(--glass-border);color:var(--text-1);
+  outline:none;transition:all .3s ease;
+}
+.field textarea{resize:vertical;min-height:88px}
+.field select option{background:#0d1830;color:#f2f6fc}
+[data-theme="light"] .field select option{background:#fff;color:#0b1a30}
+.complaint .field input:focus,.complaint .field textarea:focus{border-color:var(--danger-2);box-shadow:0 0 0 3px rgba(244,63,94,.15)}
+.inquiry .field input:focus,.inquiry .field textarea:focus,.inquiry .field select:focus{border-color:var(--success-2);box-shadow:0 0 0 3px rgba(34,197,94,.15)}
+.field input::placeholder,.field textarea::placeholder{color:var(--text-3)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.radio-row{display:flex;gap:1.2rem;flex-wrap:wrap;padding:.3rem 0}
+.radio-row label{display:flex;align-items:center;gap:.45rem;font-size:.83rem;color:var(--text-2);cursor:pointer;margin:0}
+.radio-row input{accent-color:var(--success-1);width:auto}
+.btn-submit{
+  width:100%;padding:.95rem;border:none;border-radius:14px;cursor:pointer;
+  font-size:.95rem;font-weight:600;color:#fff;display:flex;align-items:center;justify-content:center;gap:.6rem;
+  transition:all .35s ease;margin-top:.4rem;
+}
+.complaint .btn-submit{background:var(--grad-danger);box-shadow:0 4px 20px rgba(239,68,68,.3)}
+.complaint .btn-submit:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 0 26px rgba(244,63,94,.5)}
+.inquiry .btn-submit{background:var(--grad-success);box-shadow:0 4px 20px rgba(16,185,129,.3)}
+.inquiry .btn-submit:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 0 26px rgba(34,197,94,.5)}
+.btn-submit:disabled{opacity:.75;cursor:not-allowed}
+.spinner{
+  width:18px;height:18px;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;
+  border-radius:50%;animation:spin .7s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.form-msg{display:none;margin-top:.9rem;padding:.7rem 1rem;border-radius:12px;font-size:.82rem;font-weight:500;align-items:center;gap:.5rem}
+.form-msg.show{display:flex}
+.form-msg.ok{background:rgba(16,185,129,.14);border:1px solid rgba(16,185,129,.4);color:#34d399}
+.form-msg.err{background:rgba(239,68,68,.14);border:1px solid rgba(239,68,68,.4);color:#f87171}
+/* ============ BRANDS MARQUEE ============ */
+.marquee-wrap{
+  overflow:hidden;position:relative;padding:1.6rem 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+}
+.marquee-track{display:flex;gap:1.4rem;width:max-content;animation:scrollX 28s linear infinite}
+.marquee-wrap:hover .marquee-track{animation-play-state:paused}
+.marquee-track.reverse{animation:scrollXRev 32s linear infinite}
+@keyframes scrollX{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes scrollXRev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.brand-badge{
+  padding:1.1rem 2.4rem;border-radius:16px;white-space:nowrap;
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  font-size:1.05rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;
+  color:var(--text-2);transition:all .35s ease;cursor:default;
+}
+.brand-badge:hover{
+  color:var(--text-1);border-color:var(--primary);transform:translateY(-3px);
+  box-shadow:var(--glow-primary);
+  background:var(--glass-bg-strong);
+}
+.brand-note{text-align:center;color:var(--text-3);font-size:.8rem;font-weight:300;margin-top:1.6rem}
+.brand-note i{color:var(--accent);margin-right:.4rem}
+</style>
+<style>
+/* ============ WHY US ============ */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem}
+.why-card{
+  background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  padding:1.8rem 1.6rem;transition:all .4s ease;position:relative;overflow:hidden;
+}
+.why-card::before{
+  content:'';position:absolute;top:-40%;right:-40%;width:70%;height:70%;border-radius:50%;
+  background:radial-gradient(circle,rgba(34,211,238,.12),transparent 70%);
+  opacity:0;transition:opacity .5s ease;
+}
+.why-card:hover{transform:translateY(-6px);border-color:rgba(34,211,238,.45);box-shadow:var(--glow-primary)}
+.why-card:hover::before{opacity:1}
+.why-icon{
+  width:54px;height:54px;border-radius:15px;display:flex;align-items:center;justify-content:center;
+  background:var(--grad-primary);color:#fff;font-size:1.25rem;margin-bottom:1.1rem;
+  box-shadow:0 4px 18px rgba(34,211,238,.35);
+}
+.why-card:nth-child(even) .why-icon{background:var(--grad-accent);box-shadow:0 4px 18px rgba(245,158,11,.35)}
+.why-card h3{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
+.why-card p{font-size:.83rem;color:var(--text-2);font-weight:300;line-height:1.65}
+/* ============ AMC PLANS ============ */
+.amc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.8rem;max-width:840px;margin:0 auto}
+.amc-card{
+  background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:24px;
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  padding:2.2rem 2rem;position:relative;overflow:hidden;transition:all .4s ease;
+  box-shadow:var(--shadow-card);
+}
+.amc-card:hover{transform:translateY(-8px)}
+.amc-card.residential:hover{box-shadow:var(--glow-primary);border-color:rgba(34,211,238,.5)}
+.amc-card.commercial:hover{box-shadow:var(--glow-accent);border-color:rgba(245,158,11,.5)}
+.amc-ribbon{
+  position:absolute;top:1.3rem;right:-2.3rem;transform:rotate(45deg);
+  font-size:.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;
+  padding:.3rem 2.6rem;background:var(--grad-accent);box-shadow:0 2px 10px rgba(249,115,22,.4);
+}
+.amc-plan-icon{
+  width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;color:#fff;margin-bottom:1.2rem;
+}
+.residential .amc-plan-icon{background:var(--grad-primary);box-shadow:0 4px 20px rgba(34,211,238,.4)}
+.commercial .amc-plan-icon{background:var(--grad-accent);box-shadow:0 4px 20px rgba(245,158,11,.4)}
+.amc-card h3{font-size:1.25rem;font-weight:700}
+.amc-card .amc-for{font-size:.78rem;color:var(--text-2);font-weight:300;margin:.25rem 0 1.4rem}
+.amc-price{display:flex;align-items:baseline;gap:.4rem;margin-bottom:1.6rem}
+.amc-price .cur{font-size:1.1rem;font-weight:600;color:var(--text-2)}
+.amc-price .amt{font-size:2.6rem;font-weight:800;line-height:1}
+.residential .amc-price .amt{background:var(--grad-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.commercial .amc-price .amt{background:var(--grad-accent);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.amc-price .per{font-size:.8rem;color:var(--text-3)}
+.amc-list{list-style:none;margin-bottom:1.8rem}
+.amc-list li{
+  display:flex;align-items:flex-start;gap:.7rem;font-size:.86rem;color:var(--text-2);
+  padding:.5rem 0;border-bottom:1px dashed var(--glass-border);font-weight:300;
+}
+.amc-list li:last-child{border-bottom:none}
+.amc-list li i{margin-top:.2rem;font-size:.8rem}
+.residential .amc-list li i{color:var(--primary)}
+.commercial .amc-list li i{color:var(--accent)}
+.amc-btn{
+  display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;
+  padding:.95rem;border:none;border-radius:14px;cursor:pointer;font-size:.95rem;font-weight:600;color:#fff;
+  transition:all .35s ease;
+}
+.residential .amc-btn{background:var(--grad-primary);box-shadow:0 4px 20px rgba(34,211,238,.3)}
+.residential .amc-btn:hover{transform:translateY(-2px);box-shadow:var(--glow-primary)}
+.commercial .amc-btn{background:var(--grad-accent);box-shadow:0 4px 20px rgba(245,158,11,.3)}
+.commercial .amc-btn:hover{transform:translateY(-2px);box-shadow:var(--glow-accent)}
+/* ============ SERVICE AREA ============ */
+.area-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:1.8rem;align-items:stretch}
+.area-list-card,.map-card{
+  background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  padding:1.8rem;box-shadow:var(--shadow-card);
+}
+.area-list-card h3,.map-card h3{font-size:1.05rem;font-weight:600;margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem}
+.area-list-card h3 i,.map-card h3 i{color:var(--primary)}
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.area-pill{
+  display:flex;align-items:center;gap:.6rem;padding:.7rem .9rem;border-radius:12px;
+  background:var(--input-bg);border:1px solid var(--glass-border);
+  font-size:.82rem;color:var(--text-2);transition:all .3s ease;
+}
+.area-pill:hover{border-color:var(--primary);color:var(--text-1);box-shadow:0 0 14px rgba(34,211,238,.2);transform:translateX(3px)}
+.area-pill i{color:var(--primary);font-size:.75rem}
+.map-frame{border-radius:14px;overflow:hidden;border:1px solid var(--glass-border);height:340px}
+.map-frame iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.9)}
+[data-theme="dark"] .map-frame iframe,html:not([data-theme]) .map-frame iframe{filter:invert(.88) hue-rotate(180deg) saturate(.8) contrast(.92)}
+.contact-strip{
+  margin-top:1.8rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;
+}
+.contact-item{
+  display:flex;align-items:center;gap:1rem;padding:1.2rem 1.4rem;border-radius:var(--radius);
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:all .35s ease;
+}
+.contact-item:hover{transform:translateY(-3px);box-shadow:var(--glow-primary);border-color:rgba(34,211,238,.4)}
+.contact-item .cicon{
+  width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;
+  background:var(--grad-primary);color:#fff;font-size:1.05rem;flex-shrink:0;
+  box-shadow:0 4px 14px rgba(34,211,238,.3);
+}
+.contact-item small{display:block;font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-3);font-weight:500}
+.contact-item b{font-size:.9rem;font-weight:600;word-break:break-all}
+/* ============ FOOTER ============ */
+.footer{
+  border-top:1px solid var(--glass-border);background:var(--nav-bg);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  padding:1.6rem 1.2rem;text-align:center;margin-top:2rem;
+}
+.footer p{font-size:.8rem;color:var(--text-3);font-weight:300}
+.footer p b{color:var(--text-2)}
+.footer .foot-contact{margin-top:.4rem;font-size:.78rem}
+.footer .foot-contact a{color:var(--primary);font-weight:500}
+.footer .foot-contact a:hover{text-decoration:underline}
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .forms-grid{grid-template-columns:1fr}
+  .area-layout{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .hamburger{display:flex;align-items:center;justify-content:center}
+  .nav-links{
+    position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;
+    background:var(--nav-bg);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+    border-bottom:1px solid var(--glass-border);padding:1rem 1.2rem;gap:.4rem;
+    transform:translateY(-12px);opacity:0;pointer-events:none;transition:all .35s ease;
+  }
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-links a{display:block;text-align:center;padding:.8rem}
+}
+@media (max-width:560px){
+  .field-row{grid-template-columns:1fr}
+  .area-grid{grid-template-columns:1fr}
+  .hero-stats{gap:.7rem}
+  .stat-chip{min-width:120px;padding:.8rem 1.1rem}
+  .form-card{padding:1.5rem 1.2rem}
+  .logo-text small{display:none}
+}
+</style>
+</head>
+<body>
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="logo" data-goto="home">
+      <div class="logo-badge"><span>SE</span><i class="fa-solid fa-snowflake"></i></div>
+      <div class="logo-text"><b>Sheetal Enterprises</b><small>AC Sales &amp; Service</small></div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" class="nav-link active" data-tab="home">Home</a></li>
+      <li><a href="#" class="nav-link" data-tab="services">Services</a></li>
+      <li><a href="#" class="nav-link" data-tab="support">Support &amp; Inquiry</a></li>
+      <li><a href="#" class="nav-link" data-tab="brands">Brands</a></li>
+      <li><a href="#" class="nav-link" data-tab="whyus">Why Us</a></li>
+      <li><a href="#" class="nav-link" data-tab="amc">AMC Plans</a></li>
+      <li><a href="#" class="nav-link" data-tab="area">Service Area</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HOME / HERO ============ -->
+<section class="tab-section active" id="tab-home">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge"><i class="fa-solid fa-snowflake"></i> Trusted Cooling Experts — Dombivali East, Thane</div>
+      <h1 id="heroTitle">Stay <span class="grad">Cool</span>, Stay Comfortable.<br>Premium AC <span class="grad-warm">Sales &amp; Service</span></h1>
+      <p>From brand-new split ACs to same-day repairs and annual maintenance contracts — Sheetal Enterprises delivers factory-grade cooling care for homes, shops and offices across Dombivali &amp; Thane.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" data-goto="services"><i class="fa-solid fa-fan"></i> Explore Services</button>
+        <button class="btn btn-ghost" data-goto="support"><i class="fa-solid fa-headset"></i> Book a Technician</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-chip"><b>10+</b><span>Years Experience</span></div>
+        <div class="stat-chip"><b>5000+</b><span>Services Completed</span></div>
+        <div class="stat-chip"><b>7</b><span>Top Brands Serviced</span></div>
+        <div class="stat-chip"><b>24h</b><span>Response Time</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="tab-section" id="tab-services">
+  <div class="section-head">
+    <span class="kicker">What we do</span>
+    <h2>Complete <span class="grad">Cooling Solutions</span> Under One Roof</h2>
+    <p>Sales, installation, repair and maintenance — handled end-to-end by certified technicians with genuine spares.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-bg" style="background-image:url('https://images.unsplash.com/photo-1585129777188-94600bc7b4b3?auto=format&fit=crop&w=800&q=65')"></div>
+      <div class="service-content">
+        <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>AC Sales</h3>
+        <p>Split, window &amp; inverter ACs from LG, Samsung, Daikin, Voltas and more — at competitive prices with genuine warranty and doorstep delivery.</p>
+        <span class="service-tag">Best price guarantee</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-bg" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=65')"></div>
+      <div class="service-content">
+        <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>Installation</h3>
+        <p>Professional copper-pipe installation, wall mounting, vacuuming and gas-pressure testing — done right the first time, every time.</p>
+        <span class="service-tag">Same-day slots</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-bg" style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=65')"></div>
+      <div class="service-content">
+        <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+        <h3>Repair</h3>
+        <p>Gas charging, compressor faults, PCB repair, cooling issues, water leakage — diagnosed fast and fixed with genuine spare parts.</p>
+        <span class="service-tag">90-day repair warranty</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-bg" style="background-image:url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=65')"></div>
+      <div class="service-content">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Maintenance</h3>
+        <p>Deep jet-pump cleaning, filter &amp; coil servicing, and preventive AMC checkups that cut power bills and extend your AC's life.</p>
+        <span class="service-tag">AMC plans available</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ SUPPORT & INQUIRY ============ -->
+<section class="tab-section" id="tab-support">
+  <div class="section-head">
+    <span class="kicker">We're here to help</span>
+    <h2>Register a <span class="grad">Complaint</span> or Send an <span class="grad">Inquiry</span></h2>
+    <p>Fill in the form below and our team will get back to you within 24 hours. For urgent issues, call us directly.</p>
+  </div>
+  <div class="forms-grid">
+
+    <!-- Complaint Registration -->
+    <div class="form-card complaint">
+      <div class="form-title">
+        <div class="ficon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h3>Complaint Registration</h3>
+      </div>
+      <p class="form-sub">AC not cooling? Strange noise? Water leakage? Book a technician visit.</p>
+      <form id="complaintForm" novalidate>
+        <div class="field">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" name="name" placeholder="e.g. Ramesh Patil" required>
+        </div>
+        <div class="field">
+          <label>Address <span class="req">*</span></label>
+          <textarea name="address" placeholder="Flat / Building / Street / Landmark" required></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Pincode <span class="req">*</span></label>
+            <input type="text" name="pincode" inputmode="numeric" maxlength="6" placeholder="421201" required>
+          </div>
+          <div class="field">
+            <label>Appointment Date <span class="req">*</span></label>
+            <input type="date" name="appointmentDate" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Mobile Number <span class="req">*</span></label>
+            <input type="tel" name="mobile" inputmode="numeric" maxlength="10" placeholder="10-digit mobile" required>
+          </div>
+          <div class="field">
+            <label>Alternate Mobile</label>
+            <input type="tel" name="altMobile" inputmode="numeric" maxlength="10" placeholder="Optional">
+          </div>
+        </div>
+        <div class="field">
+          <label>Problem Description <span class="req">*</span></label>
+          <textarea name="problem" placeholder="Describe the issue — e.g. AC turns on but does not cool, ice forming on pipe..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> <span>Register Complaint</span></button>
+        <div class="form-msg" id="complaintMsg"></div>
+      </form>
+    </div>
+
+    <!-- Product Inquiry -->
+    <div class="form-card inquiry">
+      <div class="form-title">
+        <div class="ficon"><i class="fa-solid fa-comments-dollar"></i></div>
+        <h3>Product Inquiry</h3>
+      </div>
+      <p class="form-sub">Looking to buy a new appliance? Get our best quote — no obligation.</p>
+      <form id="inquiryForm" novalidate>
+        <div class="field">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" name="name" placeholder="e.g. Sunita Sharma" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Mobile Number <span class="req">*</span></label>
+            <input type="tel" name="mobile" inputmode="numeric" maxlength="10" placeholder="10-digit mobile" required>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="you@example.com">
+          </div>
+        </div>
+        <div class="field">
+          <label>Product Category <span class="req">*</span></label>
+          <select name="category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="AC">Air Conditioner</option>
+            <option value="Fridge">Fridge / Refrigerator</option>
+            <option value="Washing Machine">Washing Machine</option>
+            <option value="Other">Other Appliance</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Details <span class="req">*</span></label>
+          <textarea name="details" placeholder="e.g. Need a 1.5 ton inverter split AC for a 12x14 ft bedroom, budget around 40k..." required></textarea>
+        </div>
+        <div class="field">
+          <label>Preferred Contact Method <span class="req">*</span></label>
+          <div class="radio-row">
+            <label><input type="radio" name="contactMethod" value="Call" checked> Phone Call</label>
+            <label><input type="radio" name="contactMethod" value="WhatsApp"> WhatsApp</label>
+            <label><input type="radio" name="contactMethod" value="Email"> Email</label>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> <span>Send Inquiry</span></button>
+        <div class="form-msg" id="inquiryMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRANDS ============ -->
+<section class="tab-section" id="tab-brands">
+  <div class="section-head">
+    <span class="kicker">Multi-brand expertise</span>
+    <h2>We Sell &amp; Service <span class="grad">All Major Brands</span></h2>
+    <p>Authorized-grade servicing with genuine spare parts across every leading air conditioner brand in India.</p>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack1"></div>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track reverse" id="marqueeTrack2"></div>
+  </div>
+  <p class="brand-note"><i class="fa-solid fa-circle-check"></i>Genuine spares &nbsp;•&nbsp; Trained multi-brand technicians &nbsp;•&nbsp; Warranty-safe servicing</p>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="tab-section" id="tab-whyus">
+  <div class="section-head">
+    <span class="kicker">The Sheetal advantage</span>
+    <h2>Why Customers <span class="grad">Choose Us</span></h2>
+    <p>A decade of trust built on honest pricing, fast turnarounds and technicians who genuinely care.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon"><i class="fa-solid fa-user-gear"></i></div>
+      <h3>Expert Technicians</h3>
+      <p>Factory-trained, background-verified technicians with 10+ years of hands-on experience across all AC brands and tonnages.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
+      <h3>Quick Service</h3>
+      <p>Same-day visits for most complaints in Dombivali East. Emergency breakdown support with a 24-hour response guarantee.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+      <h3>Affordable Pricing</h3>
+      <p>Transparent, upfront quotes before any work begins. No hidden charges, no inflated spare-part bills — ever.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><i class="fa-solid fa-certificate"></i></div>
+      <h3>Genuine Spare Parts</h3>
+      <p>Only OEM and company-grade spares with warranty. Your AC's performance and lifespan are never compromised.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+      <h3>Service Warranty</h3>
+      <p>Every repair is backed by a 90-day service warranty. If the same issue returns, we fix it again at no extra cost.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
+      <h3>Trusted Locally</h3>
+      <p>5000+ happy households and businesses across Dombivali &amp; Thane trust us for their year-round cooling needs.</p>
+    </div>
+  </div>
+</section>
+<!-- ============ AMC PLANS ============ -->
+<section class="tab-section" id="tab-amc">
+  <div class="section-head">
+    <span class="kicker">Annual maintenance contracts</span>
+    <h2>Worry-Free Cooling, <span class="grad">All Year Round</span></h2>
+    <p>Lock in priority service, scheduled deep-cleaning and big savings with our annual maintenance plans.</p>
+  </div>
+  <div class="amc-grid">
+    <div class="amc-card residential">
+      <div class="amc-plan-icon"><i class="fa-solid fa-house"></i></div>
+      <h3>Residential AMC</h3>
+      <p class="amc-for">Perfect for homes &amp; apartments — per AC unit</p>
+      <div class="amc-price">
+        <span class="cur">&#8377;</span><span class="amt" id="priceResidential">1,999</span><span class="per">/ year</span>
+      </div>
+      <ul class="amc-list">
+        <li><i class="fa-solid fa-circle-check"></i> 3 scheduled deep-clean services per year</li>
+        <li><i class="fa-solid fa-circle-check"></i> Jet-pump wash of indoor &amp; outdoor units</li>
+        <li><i class="fa-solid fa-circle-check"></i> Gas pressure &amp; cooling performance check</li>
+        <li><i class="fa-solid fa-circle-check"></i> Priority breakdown visits — within 24 hours</li>
+        <li><i class="fa-solid fa-circle-check"></i> 15% discount on all spare parts</li>
+        <li><i class="fa-solid fa-circle-check"></i> Free filter cleaning &amp; drain-line flush</li>
+      </ul>
+      <button class="amc-btn" data-goto="support"><i class="fa-solid fa-file-signature"></i> Enroll Now</button>
+    </div>
+    <div class="amc-card commercial">
+      <div class="amc-ribbon">Popular</div>
+      <div class="amc-plan-icon"><i class="fa-solid fa-building"></i></div>
+      <h3>Commercial AMC</h3>
+      <p class="amc-for">For shops, offices &amp; clinics — per AC unit</p>
+      <div class="amc-price">
+        <span class="cur">&#8377;</span><span class="amt" id="priceCommercial">3,499</span><span class="per">/ year</span>
+      </div>
+      <ul class="amc-list">
+        <li><i class="fa-solid fa-circle-check"></i> 4 scheduled deep-clean services per year</li>
+        <li><i class="fa-solid fa-circle-check"></i> Unlimited breakdown visits — zero visit charge</li>
+        <li><i class="fa-solid fa-circle-check"></i> Same-day emergency response for businesses</li>
+        <li><i class="fa-solid fa-circle-check"></i> 20% discount on all spare parts &amp; gas top-up</li>
+        <li><i class="fa-solid fa-circle-check"></i> Quarterly performance &amp; power-efficiency report</li>
+        <li><i class="fa-solid fa-circle-check"></i> Dedicated support line for AMC customers</li>
+      </ul>
+      <button class="amc-btn" data-goto="support"><i class="fa-solid fa-file-signature"></i> Enroll Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE AREA ============ -->
+<section class="tab-section" id="tab-area">
+  <div class="section-head">
+    <span class="kicker">Where we serve</span>
+    <h2>Serving <span class="grad">Dombivali &amp; Thane</span> Region</h2>
+    <p>Fast doorstep service across these localities. Outside the list? Call us — we often cover nearby areas too.</p>
+  </div>
+  <div class="area-layout">
+    <div class="area-list-card">
+      <h3><i class="fa-solid fa-location-dot"></i> Service Locations</h3>
+      <div class="area-grid">
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Dombivali East</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Dombivali West</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Dawadi</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Thakurli</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Kalyan East</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Kalyan West</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Kopar</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Diva</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Mumbra</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Thane</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Badlapur</div>
+        <div class="area-pill"><i class="fa-solid fa-map-pin"></i> Ambernath</div>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3><i class="fa-solid fa-map"></i> Find Us — Dawadi, Dombivali East</h3>
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=Dombivli%20East%2C%20Thane%2C%20Maharashtra&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Sheetal Enterprises location map — Dombivali East, Thane" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="contact-strip">
+    <div class="contact-item">
+      <div class="cicon"><i class="fa-solid fa-phone"></i></div>
+      <div><small>Call us</small><b id="contactPhone"></b></div>
+    </div>
+    <div class="contact-item">
+      <div class="cicon"><i class="fa-solid fa-envelope"></i></div>
+      <div><small>Email</small><b id="contactEmail"></b></div>
+    </div>
+    <div class="contact-item">
+      <div class="cicon"><i class="fa-solid fa-location-dot"></i></div>
+      <div><small>Visit us</small><b id="contactAddress"></b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <p>&copy; <span id="year"></span> <b>Sheetal Enterprises</b> — Air Conditioner Sales &amp; Service. All rights reserved.</p>
+  <p class="foot-contact">
+    <a href="tel:+918286457953"><i class="fa-solid fa-phone"></i> 8286457953</a> &nbsp;•&nbsp;
+    <a href="mailto:wpl.ind.ltd2@gmail.com"><i class="fa-solid fa-envelope"></i> wpl.ind.ltd2@gmail.com</a>
+  </p>
+</footer>
+<script>
+/* =====================================================
+   SITE CONFIGURATION — edit these values only
+   ===================================================== */
+const SITE_CONFIG = {
+  businessName : "Sheetal Enterprises",
+  phone        : "8286457953",
+  email        : "wpl.ind.ltd2@gmail.com",
+  address      : "Dawadi, Near Marathi School, Dombivali East, Thane, Maharashtra",
+  amcPrices    : {
+    residential : "1,999",
+    commercial  : "3,499"
+  },
+  // Paste your Google Apps Script Web App URL here (deployed as "Anyone can access").
+  // Both forms POST their data to this endpoint.
+  googleSheetUrl : "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec",
+  brands : ["LG","Samsung","Daikin","Voltas","Hitachi","Panasonic","Carrier"]
+};
+
+/* =====================================================
+   APPLY CONFIG TO PAGE
+   ===================================================== */
+document.getElementById('contactPhone').textContent   = "+91 " + SITE_CONFIG.phone;
+document.getElementById('contactEmail').textContent   = SITE_CONFIG.email;
+document.getElementById('contactAddress').textContent = SITE_CONFIG.address;
+document.getElementById('priceResidential').textContent = SITE_CONFIG.amcPrices.residential;
+document.getElementById('priceCommercial').textContent  = SITE_CONFIG.amcPrices.commercial;
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* =====================================================
+   SPA TAB SWITCHING
+   ===================================================== */
+const sections = document.querySelectorAll('.tab-section');
+const navAnchors = document.querySelectorAll('.nav-link');
+const navLinksEl = document.getElementById('navLinks');
+
+function switchTab(tabName){
+  const target = document.getElementById('tab-' + tabName);
+  if(!target || target.classList.contains('active')) { closeMobileMenu(); return; }
+
+  const current = document.querySelector('.tab-section.active');
+  if(current){
+    current.style.transition = 'opacity .25s ease, transform .25s ease';
+    current.style.opacity = '0';
+    current.style.transform = 'translateY(-12px)';
+    setTimeout(() => {
+      current.classList.remove('active');
+      current.style.cssText = '';
+      target.classList.add('active');   // CSS animation fadeUp handles the entrance
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 250);
+  } else {
+    target.classList.add('active');
+  }
+
+  navAnchors.forEach(a => a.classList.toggle('active', a.dataset.tab === tabName));
+  closeMobileMenu();
+}
+
+navAnchors.forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  switchTab(a.dataset.tab);
+}));
+
+/* Any element with data-goto switches tabs (hero buttons, logo, AMC enroll) */
+document.querySelectorAll('[data-goto]').forEach(el =>
+  el.addEventListener('click', () => switchTab(el.dataset.goto))
+);
+
+/* =====================================================
+   MOBILE HAMBURGER MENU
+   ===================================================== */
+const hamburger = document.getElementById('hamburger');
+hamburger.addEventListener('click', () => {
+  navLinksEl.classList.toggle('open');
+  hamburger.querySelector('i').className = navLinksEl.classList.contains('open')
+    ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+});
+function closeMobileMenu(){
+  navLinksEl.classList.remove('open');
+  hamburger.querySelector('i').className = 'fa-solid fa-bars';
+}
+
+/* =====================================================
+   LIGHT / DARK THEME TOGGLE (localStorage memory)
+   ===================================================== */
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+
+function applyTheme(theme){
+  if(theme === 'light'){
+    document.documentElement.setAttribute('data-theme','light');
+    themeIcon.className = 'fa-solid fa-sun';
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    themeIcon.className = 'fa-solid fa-moon';
+  }
+  localStorage.setItem('se-theme', theme);
+}
+applyTheme(localStorage.getItem('se-theme') || 'dark');
+themeToggle.addEventListener('click', () => {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  applyTheme(isLight ? 'dark' : 'light');
+});
+
+/* =====================================================
+   HERO PARALLAX
+   ===================================================== */
+const heroTitle = document.getElementById('heroTitle');
+window.addEventListener('scroll', () => {
+  if(document.getElementById('tab-home').classList.contains('active')){
+    const y = window.scrollY;
+    heroTitle.style.transform = 'translateY(' + (y * 0.28) + 'px)';
+    heroTitle.style.opacity = Math.max(0, 1 - y / 520);
+  }
+}, { passive:true });
+
+/* =====================================================
+   BRANDS MARQUEE (duplicated list for seamless loop)
+   ===================================================== */
+function buildMarquee(trackId){
+  const track = document.getElementById(trackId);
+  const doubled = [...SITE_CONFIG.brands, ...SITE_CONFIG.brands];
+  track.innerHTML = doubled.map(b => '<div class="brand-badge">' + b + '</div>').join('');
+}
+buildMarquee('marqueeTrack1');
+buildMarquee('marqueeTrack2');
+
+/* =====================================================
+   FORM SUBMISSION → Google Sheet (Apps Script Web App)
+   ===================================================== */
+function setLoading(btn, loading, defaultHTML){
+  if(loading){
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span> <span>Submitting...</span>';
+  } else {
+    btn.disabled = false;
+    btn.innerHTML = defaultHTML;
+  }
+}
+
+function showMsg(el, ok, text){
+  el.className = 'form-msg show ' + (ok ? 'ok' : 'err');
+  el.innerHTML = '<i class="fa-solid ' + (ok ? 'fa-circle-check' : 'fa-circle-exclamation') + '"></i> ' + text;
+  setTimeout(() => { el.className = 'form-msg'; }, 7000);
+}
+
+function validateMobile(v){ return /^[6-9]\d{9}$/.test(v.trim()); }
+
+async function submitToSheet(payload){
+  // mode:'no-cors' lets the request reach Apps Script without CORS preflight failures.
+  await fetch(SITE_CONFIG.googleSheetUrl, {
+    method  : 'POST',
+    mode    : 'no-cors',
+    headers : { 'Content-Type': 'text/plain;charset=utf-8' },
+    body    : JSON.stringify(payload)
+  });
+}
+
+function wireForm(formId, msgId, formType, successText){
+  const form = document.getElementById(formId);
+  const msgEl = document.getElementById(msgId);
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('.btn-submit');
+    const defaultHTML = btn.innerHTML;
+
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    if(!validateMobile(data.mobile)){
+      showMsg(msgEl, false, 'Please enter a valid 10-digit Indian mobile number.');
+      return;
+    }
+
+    const payload = {
+      formType  : formType,
+      timestamp : new Date().toLocaleString('en-IN', { timeZone:'Asia/Kolkata' }),
+      ...data
+    };
+
+    setLoading(btn, true, defaultHTML);
+    try {
+      await submitToSheet(payload);
+      showMsg(msgEl, true, successText);
+      form.reset();
+    } catch (err) {
+      showMsg(msgEl, false, 'Something went wrong. Please call us at +91 ' + SITE_CONFIG.phone + '.');
+    } finally {
+      setLoading(btn, false, defaultHTML);
+    }
+  });
+}
+
+wireForm('complaintForm','complaintMsg','Complaint',
+  'Complaint registered! Our technician will contact you shortly.');
+wireForm('inquiryForm','inquiryMsg','Inquiry',
+  'Inquiry sent! We will share our best quote within 24 hours.');
+
+/* Prevent past dates in the appointment date picker */
+const dateInput = document.querySelector('input[name="appointmentDate"]');
+if(dateInput){ dateInput.min = new Date().toISOString().split('T')[0]; }
+</script>
+</body>
+</html>
